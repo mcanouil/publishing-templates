@@ -1,0 +1,172 @@
+:root {
+  --logo: url(https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/mcsb.svg);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Tangerine:300,300i,400,400i,500,500i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Caveat:300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
+@import url(https://fonts.googleapis.com/css?family=Ruthie:300,300i,400,400i,500,500i,700,700i);
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+
+body {
+  font-family: 'Caveat', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code', 'Lucida Console', Monaco, monospace;
+  font-size: 80%;
+}
+
+/*.logo {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  opacity: 0.75;
+  top: 10px;
+  left: 20px;
+  width: 127.85px;
+  height: 110.5px;
+  background-image: var(--logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.remark-slide-number {
+  color: #b22222;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.remark-slide-content {
+  background-image: url('background.jpg');
+  background-size: cover;
+  font-size: 32px;
+  font-weight: 600;
+  padding: 1em 1em 1em 2em;
+  color: #333333;
+}
+
+h1 {
+  margin: 0;
+}
+
+.title-slide {
+  background-image: url('cover.jpg');
+  background-size: cover;
+  color: #EEB422 !important;
+  outline: thick double #EEB422BF;
+  outline-offset: -25px;
+}
+
+.title-slide h1 {
+  opacity: 0.80;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  font-family: 'Tangerine';
+  font-size: 180px;
+  text-shadow: 1px 1px 2px #b22222;
+  color: #EEB422 !important;
+}
+
+.title-slide h2 {
+  opacity: 0.70;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-weight: 550;
+  font-family: 'Tangerine';
+  font-size: 90px;
+  text-shadow: 1px 1px 2px #b22222;
+  color: #EEB422 !important;
+}
+
+.title-slide h3 {
+  opacity: 0.50;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 32px;
+  color: #EEB422 !important;
+}
+
+.lettrine h1::first-letter {
+  font-size: 2.5em;
+  font-family: 'Ruthie', cursive;
+  font-weight: 300;
+  color: #b22222; 
+  text-shadow: 1px 1px 2px #EEB422;
+}
+
+.inverse h1 {
+  color: #333333;
+  text-shadow: none;
+}
+
+/*.inverse {
+  outline: thick double #b22222BF;
+  outline-offset: -25px;
+}*/
+
+.inverse .remark-slide-number{
+  display: none;
+}
+
+.remark__tile-view * {
+  box-sizing: border-box;
+}
+
+.remark__tile-view {
+  background: #b22222;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+  font-size: 18px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.remark__tile-view__header {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Tangerine';
+  font-size: 4em;
+  text-shadow: 1px 1px 2px #b22222;
+  color: #EEB422 !important;
+}
+
+.remark__tile-view__tiles {
+  display: grid;
+  /* Set column width in JS */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  justify-items: center;
+}
+
+.remark__tile-view__tile {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.remark__tile-view__slide-container {
+  margin: 0 auto;
+}
+
+.remark__tile-view__tile--current {
+  background: #EEB422;
+  border: 5px solid #EEB422;
+  margin: calc(0.5em - 5px);
+  border-radius: 0;
+}
+
+.remark__tile-view__tile--seen {
+  opacity: 0.5;
+}
+
+.remark__tile-view__tile:hover {
+  background: #333333;
+  opacity: 1;
+}

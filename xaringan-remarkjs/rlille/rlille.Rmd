@@ -1,0 +1,142 @@
+---
+title: "A Title"
+subtitle: "A Subtitle"
+author: |
+  Mickaël Canouil, *Ph.D.*
+  ([<i class="fas fa-home"></i> mickael.canouil.fr](https://mickael.canouil.fr/))
+institute: |
+  _Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Université de Lille_
+date: '`r format(Sys.time(), "%A, the %d of %B, %Y")`'
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    mathjax: null
+    css: assets/rlille.css
+    includes:
+      in_header: assets/_scripts.html
+    nature:
+      highlightStyle: github
+      highlightLanguage: r
+      highlightLines: true
+      slideNumberFormat: | 
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+      ratio: "16:9"
+      countIncrementalSlides: false
+---
+
+```{r setup, include = FALSE}
+options("width" = 110)
+options(htmltools.dir.version = FALSE)
+
+suppressPackageStartupMessages({
+  library(here)
+  library(knitr)
+
+  library(data.table)
+
+  library(ragg)
+  library(svglite)
+  library(showtext)
+
+  library(ggplot2)
+  library(ggtext)
+  library(patchwork)
+})
+```
+
+```{r setup-knitr, include = FALSE}
+opts_chunk$set(
+  eval = TRUE, # Default: TRUE
+  include = TRUE, # Default: TRUE
+  echo = TRUE, # Default: TRUE
+  width = getOption("width"),
+  comment = "#>",
+  fig.align = "center",
+  fig.width = 11.5, # Default: 7
+  fig.height = 5.75,  # Default: 7
+  dpi = 150, # Default: 72
+  dev = "svglite", # Alt: ragg_png
+  dev.args = list(
+    web_fonts = list("https://fonts.googleapis.com/css?family=Alegreya+Sans")
+  )
+)
+font_add_google("Alegreya Sans", "Alegreya Sans", regular.wt = 300)
+showtext_auto()
+```
+
+```{r setup-ggplot2, include = FALSE}
+source("../../ggplot2/setup-ggplot2-rlille.R")
+```
+
+# Introduction
+
+## Subtitle
+
+`some code` and some text.  
+A URL [rlille.fr](https://rlille.fr/).
+
+```{r, echo = TRUE}
+1 + 1
+```
+
+```{r, echo = TRUE}
+x <- 1
+y <- x + 1 #<<
+y
+```
+
+---
+
+# New slide with a panels
+
+.panelset[
+.panel[.panel-name[R Code]
+```{r, eval = FALSE}
+head(iris, 10)
+```
+]
+.panel[.panel-name[Table]
+```{r, echo = FALSE}
+kable(head(iris, 10))
+```
+]
+.panel[.panel-name[Plot]
+```{r, echo = FALSE}
+plot(iris[[1]], iris[[2]])
+```
+]
+]
+
+---
+
+# GGPLOT2 With `code`
+
+```{r, echo = FALSE}
+ggplot(mtcars, aes(wt, mpg)) + geom_point() + labs(title = "GGPLOT2")
+```
+
+---
+class: part-slide
+
+# PART 1 With `code`
+
+---
+
+# New slide
+
+With only text
+
+
+---
+class: part-slide
+
+.center[
+<a href="https://rlille.fr/" target="_blank"><img src="https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/rlille.svg" width = "200px"/></br>
+<img src="https://raw.githubusercontent.com/RLille/logos/main/RConsortium_Horizontal_Pantone.png" width = "200px"/>
+</br>
+<i style="font-size: 200%">rlille.fr</i>
+</a>
+]

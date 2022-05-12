@@ -1,0 +1,51 @@
+---
+title: "Publishing Templates"
+format: gfm
+execute:
+  echo: false
+  warning: false
+  error: false
+---
+
+<!-- badges: start -->
+[![License](https://img.shields.io/github/license/mcanouil/publishing-templates)](LICENSE)
+<!-- badges: end -->
+
+This is a repository of various templates for tools such as [`Quarto`](https://quarto.org) or [`RMarkdown`](https://rmarkdown.rstudio.com/).
+
+```{r}
+list_templates <- c(
+  sapply(
+    X = list.files("xaringan-remarkjs", full.names = TRUE),
+    FUN = list.files,
+    pattern = "\\.Rmd$",
+    full.names = TRUE
+  ),
+  sapply(
+    X = list.files("quarto-revealjs", full.names = TRUE),
+    FUN = list.files,
+    pattern = "\\.qmd$",
+    full.names = TRUE
+  )
+)
+
+df_templates <- data.frame(
+  tool = sub("-.*", "", names(list_templates)),
+  directory = names(list_templates),
+  html = sub("-.*/", "-", names(list_templates))
+)
+
+for (itool in sort(unique(df_templates[["tool"]]))) {
+  cat(sprintf("- `%s`\n", itool))
+  html_files_tool <- df_templates[df_templates[["tool"]] %in% itool, ]
+  for (idirectory in sort(unique(html_files_tool[["directory"]]))) {
+    cat(sprintf(
+      "  - Code at [`%s`](%s) and demo at [m.canouil.fr/publishing-templates/%s](https://m.canouil.fr/publishing-templates/%s)\n",
+      idirectory,
+      idirectory,
+      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
+      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"]
+    ))
+  }
+}
+```

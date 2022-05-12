@@ -1,0 +1,192 @@
+---
+title: "A Title"
+subtitle: "A Subtitle"
+author: |
+  Mickaël Canouil, *Ph.D.*
+  ([<i class="fas fa-home"></i> mickael.canouil.fr](https://mickael.canouil.fr/))
+institute: |
+  _Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Université de Lille_
+date: '`r format(Sys.time(), "%A, the %d of %B, %Y")`'
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    mathjax: null
+    css: assets/umr1283.css
+    includes:
+      in_header: assets/_scripts.html
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+      countIncrementalSlides: false
+---
+
+```{r setup, include = FALSE}
+options("width" = 110)
+options(htmltools.dir.version = FALSE)
+
+suppressPackageStartupMessages({
+  library(here)
+  library(knitr)
+
+  library(data.table)
+
+  library(ragg)
+  library(svglite)
+  library(showtext)
+
+  library(ggplot2)
+  library(ggtext)
+  library(patchwork)
+  library(scales)
+
+  library(gt)
+
+  # library(targets)
+  library(katex)
+})
+
+# tar_render(umr1283_8199.Rmd,
+#   path = here("slides/umr1283_8199.Rmd"),
+#   output_dir = here("reports"),
+#   packages = c(
+#     "xaringan",
+#     "here", "knitr", "data.table", "ragg", "svglite", "showtext", "ggplot2",
+#     "ggtext", "patchwork", "scales", "gt", "targets", "katex"
+#   )
+# )
+```
+
+```{r setup-knitr, include = FALSE}
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  eval = TRUE, # Default: TRUE
+  include = TRUE, # Default: TRUE
+  echo = FALSE, # Default: TRUE
+  width = getOption("width"),
+  comment = "#>",
+  fig.align = "center",
+  fig.width = 11.5, # Default: 7
+  fig.height = 5.75,  # Default: 7
+  dpi = 150, # Default: 72
+  # dev = "ragg_png"
+  dev = "svg"
+)
+```
+
+```{r setup-ggplot2, include = FALSE}
+source("../../ggplot2/setup-ggplot2-umr1283.R")
+```
+
+```{r setup-gt, include = FALSE}
+umr <- function(data) {
+  gt::tab_options(
+    data = data,
+    # table.font.color = "#93be25",
+    # column_labels.background.color = "#2a9bd3",
+    column_labels.border.top.color = "#2a9bd3",
+    column_labels.border.bottom.color = "#2a9bd3",
+    table_body.border.bottom.color = "#2a9bd3",
+    table_body.hlines.color = "#2a9bd3",
+    stub.border.color = "#2a9bd3",
+    table.border.bottom.color = "#2a9bd3",
+    table.border.top.color = "#2a9bd3",
+    table.border.right.color = "#2a9bd3",
+    table.border.left.color = "#2a9bd3",
+    heading.border.bottom.color = "#2a9bd3",
+    row_group.border.top.color = "#2a9bd3",
+    row_group.border.bottom.color = "#2a9bd3",
+    table_body.border.top.color = "#2a9bd3",
+    summary_row.border.color = "#2a9bd3",
+    source_notes.border.bottom.color = "#2a9bd3",
+    footnotes.border.bottom.color = "#2a9bd3",
+    grand_summary_row.border.color = "#2a9bd3"
+  )
+}
+```
+
+```{r functions, include = FALSE}
+eq <- function(tex, d = FALSE, ...) katex::katex_html(tex = tex, displayMode = d, ..., output = "html")
+```
+
+```{r tar-read, include = FALSE}
+# x <- tar_read(x)
+```
+
+# Introduction
+
+## Subtitle
+
+`some code` and some text.  
+A URL [www.good.cnrs.fr](https://www.good.cnrs.fr/).
+
+```{r, echo = TRUE}
+1 + 1
+```
+
+```{r, echo = TRUE}
+x <- 1
+y <- x + 1 #<<
+y
+```
+
+---
+
+# New slide with a panels
+
+.panelset[
+
+.panel[.panel-name[R Code]
+
+```{r, eval = FALSE}
+head(iris, 10)
+```
+
+]
+
+.panel[.panel-name[Table]
+
+```{r, echo = FALSE}
+kable(head(iris, 10))
+```
+
+]
+
+.panel[.panel-name[Plot]
+
+```{r, echo = FALSE}
+plot(iris[[1]], iris[[2]])
+```
+
+]
+
+]
+
+---
+
+# GGPLOT2 With `code`
+
+```{r, echo = FALSE}
+ggplot(mtcars, aes(wt, mpg)) + geom_point() + labs(title = "GGPLOT2")
+```
+
+---
+class: part-slide
+
+# PART 1 With `code`
+
+---
+
+# New slide
+
+With only text
+
+---
+class: part-slide
+
+.center[
+<a href="https://www.good.cnrs.fr/" target="_blank"><img src="https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/umr1283_8199.svg" width = "200px"/></br>
+<i style="font-size: 200%">www.good.cnrs.fr</i>
+</a>
+]

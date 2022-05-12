@@ -1,0 +1,673 @@
+:root {
+  --font-colour: #333333;
+  --bg-colour: #FAFAFA;
+  --logo: url(https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/mc.svg);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i);
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+@import url(https://use.fontawesome.com/releases/v5.12.1/css/all.css);
+
+body {
+  font-family: 'Alegreya Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code', 'Lucida Console', Monaco, monospace;
+  font-size: 80%;
+}
+
+.logo {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 69.42px;
+  height: 60px;
+  background-image: var(--logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide-url {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
+
+.slide-url a {
+  font-style: italic;
+}
+
+.slide-url a:hover {
+  font-weight: 400;
+}
+
+#picture {
+  border-style: solid;
+  border-width: 2pt;
+  border-color: var(--bg-colour);
+  border-radius: 50%;
+  padding: 5pt;
+}
+
+a, a > code {
+  color: var(--font-colour);
+  text-decoration: none;
+}
+
+a {
+  color: var(--font-colour);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+a:hover {
+  color: var(--font-colour) !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 1em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+
+.remark-slide-content {
+  background-color: var(--bg-colour);
+  border-top: 80px solid var(--font-colour);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+.title-slide {
+  background-color: var(--font-colour);
+  border-top: 0px solid var(--font-colour);
+  vertical-align: middle;
+  background-position: top 20px right 20px;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  background-image: var(--logo);
+}
+
+.part-slide {
+  color: var(--bg-colour);
+  background-color: var(--font-colour);
+  border-top: 80px solid transparent;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.part-slide a {
+  color: var(--bg-colour);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.part-slide a:hover {
+  color: var(--bg-colour) !important;
+}
+
+h1 .remark-inline-code {
+  background: var(--bg-colour);
+  color: var(--font-colour);
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.title-slide a {
+  color: #7F7F7F;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.title-slide a:hover {
+  color: var(--bg-colour) !important;
+}
+
+.clear{
+  border-top: 0px solid var(--bg-colour);
+}
+
+h1 {
+  font-weight: normal;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: var(--bg-colour);
+}
+
+h2, h3, h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: var(--font-colour);
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 00px;
+  margin-bottom: -10px;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: var(--bg-colour);
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+.pull-right + * {
+  clear: both;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: solid 5px var(--font-colour);
+  padding-left: 1em;
+}
+
+.remark-slide table {
+  margin: auto;
+  border-top: 1px solid var(--bg-colour);
+  border-bottom: 1px solid var(--bg-colour);
+}
+
+.remark-slide table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th, td {
+  padding: 5px;
+}
+
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: #eee
+}
+
+@page {
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+.left-column h2, .left-column h3, .left-column h4 {
+  color: #7F7F7F;
+}
+
+.title-slide h1  {
+  color: var(--bg-colour);
+  font-size: 50px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+
+.title-slide h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: var(--bg-colour);
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.title-slide h3  {
+  color: #7F7F7F;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+hr, .mline h1::after {
+  margin: 1em 15px 0 15px;
+}
+
+hr, .title-slide h2::after, .mline h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--bg-colour);
+  color: var(--bg-colour);
+  height: 3px;
+}
+
+.title-slide h2::after {
+  margin: 10px 15px 35px 0;
+}
+
+.remark-slide-content h1 {
+  font-size: 45px;
+}
+
+.remark-slide-content h2 {
+  font-size: 35px;
+}
+
+.remark-slide-content h3 {
+  font-size: 30px;
+}
+
+.mline h1::after {
+  margin: 10px 15px 0 15px;
+}
+
+.hljs-github .hljs {
+  background: #EBEBEB;
+}
+
+.remark-inline-code {
+  background: #EBEBEB;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.code10 .remark-code {
+  font-size: 10%;
+}
+
+.code20 .remark-code {
+  font-size: 20%;
+}
+
+.code30 .remark-code {
+  font-size: 30%;
+}
+
+.code40 .remark-code {
+  font-size: 40%;
+}
+
+.code50 .remark-code {
+  font-size: 50%;
+}
+
+.code60 .remark-code {
+  font-size: 60%;
+}
+
+.code70 .remark-code {
+  font-size: 70%;
+}
+
+.code80 .remark-code {
+  font-size: 80%;
+}
+
+.code90 .remark-code {
+  font-size: 90%;
+}
+
+.code100 .remark-code {
+  font-size: 100%;
+}
+
+.font10 {
+  font-size: 10%;
+}
+
+.font20 {
+  font-size: 20%;
+}
+
+.font30 {
+  font-size: 30%;
+}
+
+.font40 {
+  font-size: 40%;
+}
+
+.font50 {
+  font-size: 50%;
+}
+
+.font60 {
+  font-size: 60%;
+}
+
+.font70 {
+  font-size: 70%;
+}
+
+.font80 {
+  font-size: 80%;
+}
+
+.font90 {
+  font-size: 90%;
+}
+
+.font100 {
+  font-size: 100%;
+}
+
+.font110 {
+  font-size: 110%;
+}
+
+.font120 {
+  font-size: 120%;
+}
+
+.font130 {
+  font-size: 130%;
+}
+
+.font140 {
+  font-size: 140%;
+}
+
+.font150 {
+  font-size: 150%;
+}
+
+.font160 {
+  font-size: 160%;
+}
+
+.font170 {
+  font-size: 170%;
+}
+
+.font180 {
+  font-size: 180%;
+}
+
+.font190 {
+  font-size: 190%;
+}
+
+.font200 {
+  font-size: 200%;
+}
+
+/* Code Hover Highlight */
+
+/* Line Hover Indicator */
+.remark-code-line:hover {
+  font-weight: bold;
+  opacity: 1 !important;
+}
+
+.remark-code-line:hover:before {
+  content: "\25B6";
+  color: #6d7e8a;
+  position: absolute;
+  transform: translateX(-1.2em);
+  animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes hover {
+  0% {
+    transform: translateX(-1.2em);
+  }
+  100% {
+    transform: translateX(-0.8em);
+  }
+}
+
+.remark-code-line-highlighted {
+  background-color: var(--font-colour);
+  color: var(--bg-colour);
+  opacity: 0.5;
+}
+
+/* Mute highlighted line */
+.remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+  opacity: 0.4;
+}
+
+.remark-code-line:hover:before {
+  color: var(--font-colour);
+}
+
+.remark-slide-number .progress-bar {
+  background-color: var(--font-colour);
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  color: #7F7F7F;
+  opacity: 1;
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: var(--font-colour);
+}
+
+.panelset {
+  width: 100%;
+  position: relative;
+  --panel-tabs-border-bottom: var(--font-colour);
+  --panel-tab-foreground: var(--font-colour);
+  --panel-tab-background: unset;
+  --panel-tab-active-foreground: var(--font-colour);
+  --panel-tab-active-background: unset;
+  --panel-tab-hover-foreground: var(--font-colour);
+  --panel-tab-hover-background: unset;
+  --panel-tab-active-border-color: var(--font-colour);
+  --panel-tab-hover-border-color: var(--font-colour);
+  --panel-tab-inactive-opacity: 0.5;
+  --panel-tab-font-family: inherit;
+}
+
+.panelset * {
+  box-sizing: border-box;
+}
+
+.panelset .panel-tabs {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+          align-items: center;
+  overflow-y: visible;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 2px 0;
+  box-shadow: inset 0 -2px 0px var(--panel-tabs-border-bottom);
+}
+
+.panelset .panel-tabs * {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.panelset .panel-tabs .panel-tab {
+  min-height: 50px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0.5em 1em;
+  font-family: var(--panel-tab-font-family);
+  opacity: var(--panel-tab-inactive-opacity);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  color: var(--panel-tab-foreground);
+  background-color: var(--panel-tab-background);
+  list-style: none;
+  z-index: 5;
+}
+
+.panelset .panel-tabs .panel-tab > a {
+  color: var(--font-colour);
+  text-decoration: none;
+  border: none;
+}
+
+.panelset .panel-tabs .panel-tab > a:focus {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+.panelset .panel-tabs .panel-tab > a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+.panelset .panel-tabs .panel-tab:hover {
+  border-bottom-color: var(--panel-tab-hover-border-color);
+  color: var(--panel-tab-hover-foreground);
+  background-color: var(--panel-tab-hover-background);
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.panelset .panel-tabs .panel-tab:focus {
+  outline: none;
+  color: var(--panel-tab-hover-foreground);
+  border-bottom-color: var(--panel-tab-hover-border-color);
+  background-color: var(--panel-tab-hover-background);
+}
+
+.panelset .panel-tabs .panel-tab.panel-tab-active {
+  border-top-color: var(--panel-tab-active-border-color);
+  color: var(--panel-tab-active-foreground);
+  background-color: var(--panel-tab-active-background);
+  opacity: 1;
+  font-weight: bold;
+}
+
+.panelset .panel {
+  display: none;
+}
+
+.panelset .panel-active {
+  display: block;
+}
+
+.column {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+
+.remark__tile-view * {
+  box-sizing: border-box;
+}
+
+.remark__tile-view {
+  background: var(--font-colour);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  font-size: 18px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.remark__tile-view__header {
+  text-align: center;
+  color: var(--bg-colour);
+}
+
+.remark__tile-view__tiles {
+  display: grid;
+  /* Set column width in JS */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  justify-items: center;
+}
+
+.remark__tile-view__tile {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid var(--bg-colour);
+}
+
+.remark__tile-view__slide-container {
+  margin: 0 auto;
+}
+
+.remark__tile-view__tile--current {
+  background: var(--bg-colour);
+  border: 5px solid var(--bg-colour);
+  margin: calc(0.5em - 5px);
+  border-radius: 0;
+}
+
+.remark__tile-view__tile--seen {
+  opacity: 0.5;
+}
+
+.remark__tile-view__tile:hover {
+  background: #44bc96;
+  opacity: 1;
+}
+
+.remark-container {
+  background: var(--font-colour);
+}
