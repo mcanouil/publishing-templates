@@ -3,10 +3,10 @@
 <table width = "100%">
 <tbody>
   <tr>
-    <td style = "vertical-align: baseline" width = "40%">
+    <td style = "vertical-align: baseline; text-align: center;" width = "40%">
       <img src = "https://github.com/mcanouil.png" class = "picture" style="vertical-align: baseline" />
     </td>
-    <td style = "vertical-align: middle" width = "60%">
+    <td style = "vertical-align: middle; text-align: center;" width = "60%">
       <ul style = "list-style:none;">
         <li><a href = "https://mickael.canouil.fr/" target = "_blank"><i class = "fas fa-home"></i> mickael.canouil.fr</a></li>
         <li><a href = "https://www.linkedin.com/in/mickael-canouil/" target = "_blank"><i class = "fab fa-linkedin"></i> mickael-canouil</a></li>
