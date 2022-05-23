@@ -14,6 +14,9 @@ This is a repository of various templates for tools such as
     -   Code in [`quarto-revealjs/coeos`](quarto-revealjs/coeos) and
         demo at
         [m.canouil.fr/publishing-templates/quarto-coeos](https://m.canouil.fr/publishing-templates/quarto-coeos)
+    -   Code in [`quarto-revealjs/storybook`](quarto-revealjs/storybook)
+        and demo at
+        [m.canouil.fr/publishing-templates/quarto-storybook](https://m.canouil.fr/publishing-templates/quarto-storybook)
     -   Code in [`quarto-revealjs/umr1283`](quarto-revealjs/umr1283) and
         demo at
         [m.canouil.fr/publishing-templates/quarto-umr1283](https://m.canouil.fr/publishing-templates/quarto-umr1283)
