@@ -41,9 +41,14 @@ for (itool in sort(unique(df_templates[["tool"]]))) {
   html_files_tool <- df_templates[df_templates[["tool"]] %in% itool, ]
   for (idirectory in sort(unique(html_files_tool[["directory"]]))) {
     cat(sprintf(
-      "  - Code in [`%s`](%s) and demo at [m.canouil.fr/publishing-templates/%s](https://m.canouil.fr/publishing-templates/%s)\n",
+      paste0(
+        "  - Code in [`%s`](%s)  ",
+        "    [![Title slide of `%s`](thumbs/%s){x150}](https://m.canouil.fr/publishing-templates/%s)\n"
+      ),
       idirectory,
       idirectory,
+      idirectory,
+      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"]
     ))

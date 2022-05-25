@@ -30,3 +30,21 @@ devnull <- sapply(
     )
   }
 )
+
+dir.create("thumbs", showWarnings = FALSE, mode = "0755")
+Sys.setenv(CHROMOTE_CHROME = "/Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser")
+invisible(lapply(
+  X = list.files(
+    path = "docs",
+    pattern = "\\.html$",
+    full.names = TRUE
+  ),
+  FUN = function(ihtml) {
+    webshot2::webshot(
+      url = ihtml,
+      file = file.path("thumbs", sub("\\.html", ".png", basename(ihtml))),
+      vwidth = 1920,
+      vheight = 1080
+    )
+  }
+))
