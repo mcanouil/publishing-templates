@@ -153,6 +153,11 @@ theme_umr <- function(
     complete = TRUE
   )
 }
+sysfonts::font_add(
+  family = "Verdana",
+  regular = systemfonts::match_font("Verdana", italic = FALSE, bold = FALSE)$path
+)
+showtext::showtext_auto()
 ggplot2::theme_set(theme_umr(base_size = 18, base_family = "Verdana"))
 
 if (nzchar(system.file(package = "ggtext"))) {
