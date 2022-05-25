@@ -42,7 +42,7 @@ for (itool in sort(unique(df_templates[["tool"]]))) {
   for (idirectory in sort(unique(html_files_tool[["directory"]]))) {
     cat(sprintf(
       paste0(
-        "  - Code in [`%s`](%s)  ",
+        "  - [`%s`](%s)  \n",
         '    [<img alt="Title slide of `%s`" src="thumbs/%s.png" width="150" />](https://m.canouil.fr/publishing-templates/%s)\n'
       ),
       idirectory,
