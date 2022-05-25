@@ -43,12 +43,11 @@ for (itool in sort(unique(df_templates[["tool"]]))) {
     cat(sprintf(
       paste0(
         "  - Code in [`%s`](%s)  ",
-        "    [![Title slide of `%s`](thumbs/%s){x150}](https://m.canouil.fr/publishing-templates/%s)\n"
+        '    [<img alt="Title slide of `%s`" src="thumbs/%s" width="150" />](https://m.canouil.fr/publishing-templates/%s)\n'
       ),
       idirectory,
       idirectory,
       idirectory,
-      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"]
     ))
