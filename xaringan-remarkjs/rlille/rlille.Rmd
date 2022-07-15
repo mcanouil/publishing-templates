@@ -2,8 +2,7 @@
 title: "A Title"
 subtitle: "A Subtitle"
 author: |
-  Mickaël Canouil, *Ph.D.*
-  ([<i class="fas fa-home"></i> mickael.canouil.fr](https://mickael.canouil.fr/))
+  Mickaël Canouil, *Ph.D.* ([<i class="fas fa-home"></i> mickael.canouil.fr](https://mickael.canouil.fr/))
 institute: |
   _Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Université de Lille_
 date: '`r format(Sys.time(), "%A, the %d of %B, %Y")`'

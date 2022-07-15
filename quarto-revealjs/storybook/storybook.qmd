@@ -18,7 +18,7 @@ format:
       <a href = "https://creativecommons.org/licenses/by-sa/4.0/">License: CC-BY-SA-4.0</a>
     logo: https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/mcsb.svg
     include-in-header: assets/favicon.html
-    background-image: assets/cover.jpg
+    background-image: https://raw.githubusercontent.com/mcanouil/publishing-templates/main/quarto-revealjs/storybook/assets/cover.jpg
 ---
 
 # Chapter 1 {background-image="assets/background.jpg"}

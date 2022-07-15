@@ -17,7 +17,7 @@ format:
 
 ```{r, include = FALSE}
 showtext::showtext_auto()
-source("../../ggplot2/setup-ggplot2-umr1283.R")
+source(normalizePath("../../ggplot2/setup-ggplot2-umr1283.R"))
 ```
 
 ## Introduction
