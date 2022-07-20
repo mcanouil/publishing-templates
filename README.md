@@ -11,12 +11,12 @@ This is a repository of various templates for tools such as
 [`RMarkdown`](https://rmarkdown.rstudio.com/).
 
 -   `quarto`
-    -   `quarto-revealjs/coeos`  
-        [<img alt="Title slide of `quarto-revealjs/coeos`" src="thumbs/quarto-coeos.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/quarto-coeos.html)
+    -   `quarto-revealjs/quarto-revealjs-coeos`  
+        [<img alt="Title slide of `quarto-revealjs/quarto-revealjs-coeos`" src="thumbs/quarto-coeos.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/quarto-coeos.html)
+    -   `quarto-revealjs/quarto-revealjs-storybook`  
+        [<img alt="Title slide of `quarto-revealjs/quarto-revealjs-storybook`" src="thumbs/quarto-storybook.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/quarto-storybook.html)
     -   `quarto-revealjs/quarto-revealjs-umr1283`  
         [<img alt="Title slide of `quarto-revealjs/quarto-revealjs-umr1283`" src="thumbs/quarto-umr1283.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/quarto-umr1283.html)
-    -   `quarto-revealjs/storybook`  
-        [<img alt="Title slide of `quarto-revealjs/storybook`" src="thumbs/quarto-storybook.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/quarto-storybook.html)
 -   `xaringan`
     -   `xaringan-remarkjs/coeos`  
         [<img alt="Title slide of `xaringan-remarkjs/coeos`" src="thumbs/xaringan-coeos.png" width="150" />](https://m.canouil.fr/publishing-templates/docs/xaringan-coeos.html)
