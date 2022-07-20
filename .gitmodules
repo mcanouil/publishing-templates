@@ -4,3 +4,9 @@
 [submodule "xaringan-remarkjs/xaringan-remarkjs-umr1283"]
 	path = xaringan-remarkjs/xaringan-remarkjs-umr1283
 	url = https://github.com/umr1283/xaringan-remarkjs-umr1283
+[submodule "quarto-revealjs/quarto-revealjs-storybook"]
+	path = quarto-revealjs/quarto-revealjs-storybook
+	url = https://github.com/mcanouil/quarto-revealjs-storybook
+[submodule "quarto-revealjs/quarto-revealjs-coeos"]
+	path = quarto-revealjs/quarto-revealjs-coeos
+	url = https://github.com/mcanouil/quarto-revealjs-coeos
