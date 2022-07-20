@@ -1,0 +1,25 @@
+name: Update Submodules
+
+on:
+  schedule:
+    - cron: "0 12 * * SUN"
+  push:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pull & update submodules recursively
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+      - name: Commit
+        run: | 
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push || echo "No changes to commit"
