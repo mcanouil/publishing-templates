@@ -1,0 +1,6 @@
+[submodule "quarto-revealjs/quarto-revealjs-umr1283"]
+	path = quarto-revealjs/quarto-revealjs-umr1283
+	url = https://github.com/umr1283/quarto-revealjs-umr1283
+[submodule "xaringan-remarkjs/xaringan-remarkjs-umr1283"]
+	path = xaringan-remarkjs/xaringan-remarkjs-umr1283
+	url = https://github.com/umr1283/xaringan-remarkjs-umr1283
