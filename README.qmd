@@ -19,7 +19,7 @@ list_templates <- c(
   sapply(
     X = list.files("xaringan-remarkjs", full.names = TRUE),
     FUN = list.files,
-    pattern = "\\.Rmd$",
+    pattern = "\\.rmd$",
     full.names = TRUE
   ),
   sapply(
@@ -33,7 +33,8 @@ list_templates <- c(
 df_templates <- data.frame(
   tool = sub("-.*", "", names(list_templates)),
   directory = names(list_templates),
-  html = sub("-.*/", "-", names(list_templates))
+  html = gsub("([^-]+)-.*[-/]+(.*)", "docs/\\1-\\2.html", names(list_templates)),
+  png = gsub("([^-]+)-.*[-/]+(.*)", "thumbs/\\1-\\2.png", names(list_templates))
 )
 
 for (itool in sort(unique(df_templates[["tool"]]))) {
@@ -43,12 +44,12 @@ for (itool in sort(unique(df_templates[["tool"]]))) {
     cat(sprintf(
       paste0(
         "  - [`%s`](%s)  \n",
-        '    [<img alt="Title slide of `%s`" src="thumbs/%s.png" width="150" />](https://m.canouil.fr/publishing-templates/%s)\n'
+        '    [<img alt="Title slide of `%s`" src="%s" width="150" />](https://m.canouil.fr/publishing-templates/%s)\n'
       ),
       idirectory,
       idirectory,
       idirectory,
-      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"],
+      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "png"],
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"]
     ))
   }
