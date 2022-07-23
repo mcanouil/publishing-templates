@@ -17,6 +17,7 @@ jobs:
           git submodule update --init --recursive
           git submodule update --recursive --remote
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "ci: automatic weekly update
@@ -27,3 +28,9 @@ jobs:
           branch: auto-detected-updates
           delete-branch: true
           title: "Automatic weekly update"
+      - name: Auto approve
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: juliangruber/approve-pull-request-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ steps.cpr.outputs.pull-request-number }}
