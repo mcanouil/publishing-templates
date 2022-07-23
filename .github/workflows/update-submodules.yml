@@ -20,17 +20,14 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: "ci: automatic weekly update
-          
-          
-          Co-authored-by: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          commit-message: "ci: automatic weekly update"
           signoff: false
           branch: auto-detected-updates
           delete-branch: true
           title: "Automatic weekly update"
-      - name: Auto approve
-        if: steps.cpr.outputs.pull-request-operation == 'created'
-        uses: juliangruber/approve-pull-request-action@v1
+      - name: Merge Pull Request
+        uses: juliangruber/merge-pull-request-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ steps.cpr.outputs.pull-request-number }}
+          method: merge
