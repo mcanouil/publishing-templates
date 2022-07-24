@@ -26,6 +26,7 @@ jobs:
           delete-branch: true
           title: "Automatic weekly update"
       - name: Merge Pull Request
+        if: ${{ steps.cpr.outputs.pull-request-number != '' }}
         uses: juliangruber/merge-pull-request-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
