@@ -25,6 +25,8 @@ jobs:
           branch: auto-detected-updates
           delete-branch: true
           title: "Automatic weekly update"
+          committer: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
       - name: Merge Pull Request
         if: ${{ steps.cpr.outputs.pull-request-number != '' }}
         uses: juliangruber/merge-pull-request-action@v1
