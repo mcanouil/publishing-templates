@@ -49,7 +49,7 @@ for (itool in sort(unique(df_templates[["tool"]]))) {
       idirectory,
       idirectory,
       html_files_tool[html_files_tool[["directory"]] %in% idirectory, "png"],
-      html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"]
+      sub("docs/", "", html_files_tool[html_files_tool[["directory"]] %in% idirectory, "html"])
     ))
   }
 }
