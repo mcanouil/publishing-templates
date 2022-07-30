@@ -1,5 +1,5 @@
 dir.create("thumbs", showWarnings = FALSE, mode = "0755")
-Sys.setenv(CHROMOTE_CHROME = "/Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser")
+# Sys.setenv(CHROMOTE_CHROME = "/Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser")
 
 devnull <- sapply(
   X = sapply(
