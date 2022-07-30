@@ -6,7 +6,8 @@ devnull <- sapply(
     X = list.files("xaringan-remarkjs", full.names = TRUE),
     FUN = list.files,
     pattern = "\\.rmd$",
-    full.names = TRUE
+    full.names = TRUE,
+    ignore.case = TRUE
   ),
   FUN = function(itemplate) {
     ihtml <- paste0(
