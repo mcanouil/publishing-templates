@@ -22,6 +22,11 @@ jobs:
             ggtext
             patchwork
             showtext
+            gt
+            ragg
+            svglite
+            here
+            data.table
             knitr
             rmarkdown
             quarto
